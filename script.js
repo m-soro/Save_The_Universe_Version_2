@@ -201,7 +201,7 @@ const Game = {
   },
 
   /**
-   * Instead of a while loop to restart the game. I'm reloading the page with 5 second delay
+   * Instead of a while loop to restart the game. I'm reloading the page with 3.5 second delay
    * to see the win or lose graphics.
    */
   restart: () => setTimeout(() => document.location.reload(), 3500),
@@ -230,8 +230,7 @@ const Game = {
   },
 
   /**
-   * Initiates the game play. First it updates the stats, then after 1 second delay
-   * will prompt for the players name. If no delay. Stat boxes will not be loaded. Prompt is too fast.
+   * Initiates the game play. It creates an array of enemies based on mode selected then, updates the stats.
    * Both the hero and enemy has event listeners, technically anywhere you click you will get the same action.
    * The red border that moves between two characters mimicks a prompt for a click.
    *
